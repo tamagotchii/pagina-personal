@@ -32,6 +32,12 @@ html, body {
   flex: 1 100%;
 }
 
+.container {
+  width: 75%;
+  margin:0 auto;
+
+
+}
 
 /* ----------- FONTS ------------- */
 
@@ -44,22 +50,16 @@ src: url('fonts/cheddarjack.ttf');
 /* ----------- HEADER ------------- */
 
 .header {
-  background-color: #55c3dc;
+  background-color: #61B3C1;
   padding: 15px;
 
 }
 
-.container {
-  width: 75%;
-  margin:0 auto;
-
-
-}
 
 .header h1 {
   font-size: 5em;
   line-height: 0.9em;
-  text-shadow: 2px 2px 8px #43454D;
+  text-shadow: 2px 2px 8px #102124;
   float: left;
   margin-bottom: 5px;
 
@@ -103,17 +103,15 @@ src: url('fonts/cheddarjack.ttf');
   padding: 2em;
 }
 
-.nav a:hover, .nav a:active{
-  background-color: #44A6BD;
-}
+
 
 .active{
-  background-color: #44A6BD;
-  box-shadow: inset 0 0 12px #08697F;
-
+  background-color: #F7E1CF;
+  color: #3B3D3F !important;;
 }
 
   /*button icon responsive*/
+
   .nav li {
     text-decoration: none;
     display: inline;
@@ -124,25 +122,23 @@ src: url('fonts/cheddarjack.ttf');
   .nav .menuicon {
     display: none;
   }
-  /************************/
 
 
 .nav .menuicon img {
   width:20px;
 }
 
+  /*end button icon responsive*/
+
 
 
 
 /* ----------- CONTENT ------------- */
 .content {
-  background-color: #498593;
-  -moz-box-shadow:    inset 0 0 10px #0F424E;
-   -webkit-box-shadow: inset 0 0 10px #0F424E;
-   box-shadow:         inset 0 0 10px #0F424E;
-
+  background-color: #F7E1CF;
 
 }
+
 /* ----------- CONTENT INDEX ------------- */
 
 .welcome {
@@ -158,6 +154,37 @@ src: url('fonts/cheddarjack.ttf');
 .welcome img {
   width: 100%;
 }
+
+/* ----------- CONTENT ABOUT ------------- */
+
+.aboutinfo, .aboutbackground {
+    list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+
+}
+
+.aboutinfo {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3.3em;
+  font-family: 'Pacifico', cursive;
+  color: #303030;
+
+}
+
+.aboutbackground img {
+  width: 50%;
+}
+
 
 /* ----------- CONTENT WORK ------------- */
 .categories {
@@ -184,7 +211,7 @@ src: url('fonts/cheddarjack.ttf');
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.9em;
   text-decoration: none;
-  color: #ffffff;
+  color: #3B3D3F;
   padding: 0.6em;
   opacity: 0.7;
 }
@@ -202,8 +229,6 @@ src: url('fonts/cheddarjack.ttf');
   opacity: 1 !important;
   font-size: 2.5em !important;
 }
-
-
 
 
 .masonry {
@@ -232,10 +257,9 @@ src: url('fonts/cheddarjack.ttf');
 
 
 /* ----------- CONTENT CONTACT ------------- */
-.message, .contactinfo {
+
+.message, .contactinfo h2, .contactinfo p {
   list-style: none;
-  padding:30px;
-  height:100%;
 
   display: -webkit-box;
   display: -moz-box;
@@ -245,44 +269,36 @@ src: url('fonts/cheddarjack.ttf');
   -webkit-flex-flow: row wrap;
   justify-content: center;
 
-}
 
-.message {
-  text-align: center;
-  height: 50px;
-  margin-top: 50px;
-}
 
-.message h2 {
-  font-family: 'Noto Sans', sans-serif;
-  padding: 10px 10px 20px 10px;
-  border-radius: 5px;
-  background-color:  #55c3dc;
-  height: 50px;
-  width: 70%;
-
-  -moz-box-shadow:     0 0 10px #0F424E;
-   -webkit-box-shadow: 0 0 10px #0F424E;
-   box-shadow:         0 0 10px #0F424E;
-
-  color: #ffffff;
-  text-shadow: 2px 2px 3px #02323E;
-  font-size: 4em;
 }
 
 .contactinfo {
-  color: #ffffff;
+  margin: 0 auto;
+  width: 60%;
+  color: #303030;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 2em;
-  height: 250px;
+  margin-bottom: 30px;
+  text-align: center;
+
 }
 
+.contactinfo h2 {
+  padding: 50px 0 50px 0;
+  font-size: 6em;
+  font-family: 'Pacifico', cursive;
+
+}
+
+.contactinfo p {
+  font-size: 2.5em;
+}
 
 
 
 /* ----------- FOOTER ------------- */
 .footer {
-  background-color: #55c3dc;
+  background-color: #303030;
 
 }
 
@@ -305,14 +321,15 @@ src: url('fonts/cheddarjack.ttf');
 
 }
 
-.social:hover img:hover {
-  background-color: #ffffff;
-  border-radius: 9px;
-}
-
+/******************************************/
 /* -----------MEDIA QUERIES ------------- */
+/******************************************/
+
+
 
 @media only screen and (max-width : 979px) {
+
+  /****** HEADER ******/
 
 .nav {
   justify-content: flex-end;
@@ -325,17 +342,16 @@ src: url('fonts/cheddarjack.ttf');
 
 .nav a {
   font-size: 1.3em;
-  padding: 2.4em ;
+  padding: 2.5em 1.5em 2.5em 1.5em ;
 
 }
 
 .nav a:hover, .nav a:active{
-  background-color: #44A6BD;
+  background-color: #F7E1CF;
 }
 
 .active{
-  background-color: #44A6BD !important;
-  box-shadow: inset 0 0 12px #08697F;
+  background-color: #F7E1CF !important;
 
 }
 
@@ -349,6 +365,7 @@ src: url('fonts/cheddarjack.ttf');
     display: none;
   }
 
+  /****** CONTENT WORK ******/
 
 
 .categories {
@@ -372,7 +389,6 @@ src: url('fonts/cheddarjack.ttf');
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.5em;
   text-decoration: none;
-  color: #ffffff;
   padding: 0.4em;
   opacity: 0.7;
 }
@@ -399,18 +415,31 @@ src: url('fonts/cheddarjack.ttf');
     width: 30%;
     margin: 10px auto;
   }
+  
+  
+  /****** CONTENT ABOUT ******/
+  
+  .aboutinfo {
+    width: 80%
+  }
 
-  /*CONTACT*/
-  .message h2 {
-    font-size: 3.4em;
-    padding-top: 20px;
+  /****** CONTENT CONTACT ******/
+  
+  .contactinfo {
+    width: 100%;
+  }
+  
+  .message img {
+    width: 100%;
   }
 
 
 }
 
 @media only screen and (max-width : 767px) {
-  /*.header*/
+
+  /****** HEADER ******/
+
   .header h1 {
     font-size: 7em;
     line-height: 0.9em;
@@ -419,12 +448,15 @@ src: url('fonts/cheddarjack.ttf');
     margin-bottom: 5px;
   }
 
+  /****** CONTENT WORK ******/
+
+
   .container {
     width:90%;
     text-align:center;
   }
 
-  /*.nav responsive menu*/
+  /****** .nav responsive menu ******/
 
   .nav {
     list-style: none;
@@ -456,29 +488,28 @@ src: url('fonts/cheddarjack.ttf');
   }
 
 .nav a:hover, .nav a:active{
-  background-color: #44A6BD;
+  background-color: transparent;
   box-shadow: none;
   border-radius: 50px;
 }
 
 .active{
-  background-color: #44A6BD;
   box-shadow: none;
   border-radius: 50px;
 
 
 }
 
-  /*.categories responsive menu*/
+  /****** .categories responsive menu ******/
+
   .categories {
     min-height: 40px;
   }
   .categories ul {
     width: 180px;
     padding: 5px 0;
-    border: solid 1px #aaa;
     background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 0 1px 2px rgba(0,0,0,.3);
   }
   .categories li {
@@ -496,10 +527,11 @@ src: url('fonts/cheddarjack.ttf');
   }
   .categories .current a {
     background: none;
-    color: #666;
+    color: #303030;
   }
 
-  /* on nav hover */
+  /****** on nav hover ******/
+
   .categories ul:hover {
     background-image: none;
   }
@@ -511,33 +543,26 @@ src: url('fonts/cheddarjack.ttf');
     background: url(images/icon-check.png) no-repeat 10px 7px;
   }
 
-  /*gallerie work*/
+  /****** GALLERY WORK ******/
+
   .masonry img {
     width: 46%;
   }
 
-  /*CONTACT*/
+  /****** CONTENT CONTACT ******/
 
-  .message {
-  height: 30px;
-  margin-top: 10px;
+  .message img {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
-  .message h2 {
-    font-size: 3em;
-    padding:0;
-    padding-top: 8px;
-    width: 100%
-  }
-
-  .contactinfo {
-    font-size: 2em;
-  }
 }
 
 
 @media only screen and (max-width : 480px) {
-  /*.header*/
+
+  /****** HEADER ******/
+
   .header h1 {
     font-size: 5.5em;
   }
@@ -575,7 +600,8 @@ src: url('fonts/cheddarjack.ttf');
   box-shadow: none;
   }
 
-  /* on nav hover */
+  /****** on nav hover ******/
+
   .nav ul:hover {
     background-image: none;
   }
@@ -587,29 +613,43 @@ src: url('fonts/cheddarjack.ttf');
   }
 
 
+  /****** CONTENT ABOUT ******/
 
-  /*.gallerie img*/
+  .aboutinfo {
+    font-size: 2.5em;
+    width: 90%;
+  }
+
+  .aboutbackground img {
+    width: 100%;
+  }
+
+  /****** GALLERY WORK ******/
 
   .masonry img {
     width: 100%;
   }
 
-  /*CONTACT*/
+  /****** CONTENT CONTACT ******/
 
-  .message {
-  height: 30px;
-  margin-top: 10px;
-  }
-
-  .message h2 {
-    font-size: 2em;
-    padding:0;
-    padding-top: 15px;
-    width: 100%
+  .message img {
+    width: 100%;
+    margin: 15px 0 15px 0;
   }
 
   .contactinfo {
-    font-size: 1.5em;
+    width: 90%;
+    margin:0 auto;
   }
+
+  .contactinfo h2  {
+    font-size: 4em;
+    padding: 30px 0 40px 0;
+  }
+
+  .contactinfo p {
+    font-size: 2em;
+  }
+
 
 }
